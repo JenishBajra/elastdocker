@@ -4,12 +4,13 @@
 #
 server.name: kibana
 server.host: "0.0.0.0"
+server.port: 5008
 
 # Elasticsearch Connection
 elasticsearch.hosts: [ "http://${ELASTICSEARCH_HOST_PORT}" ]
 
 # SSL settings
-server.ssl.enabled: true
+server.ssl.enabled: false
 server.ssl.certificate: /certs/kibana.crt
 server.ssl.key: /certs/kibana.key
 server.ssl.certificateAuthorities: [ "/certs/ca.crt" ]

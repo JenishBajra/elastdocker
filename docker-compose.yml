@@ -54,8 +54,9 @@ services:
       - source: elasticsearch.key
         target: /usr/share/elasticsearch/config/certs/elasticsearch.key
     ports:
-      - "9200:9200"
-      - "9300:9300"
+      - 9200:9200
+      - 9300:9300
+      - 5007:5007
     ulimits:
       memlock:
         soft: -1
@@ -103,4 +104,4 @@ services:
       - source: kibana.key
         target: /certs/kibana.key
     ports:
-      - "5601:5601"
+      - "5008:5008"
